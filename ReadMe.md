@@ -229,6 +229,63 @@ As indicated below, as the age of the car increases, the price goes lower, also 
 <br><br>
 
 
+From above plots of coefficients, we can conclude that bars that are above the zero line, will make the car expensive and the bars below the zero line will make the car less expensive. this can be provided to the car dealership to help their customers to pick a right car based on their budget. 
+
+<br>
+
+## Conclusion
+
+Based on the information that was retrived from this dataset, Ford F-150 (Pickup) is the highest sold car across the United States. This was also verified in <a href="https://www.iseecars.com/most-popular-cars-study">iSeeCars.com</a><br>
+Purhaps this can be advised to the car dealership as what used car is more populare in the country. 
+
+<hr>
+<hr>
+
+### FYI - If you are interested testing this model, It has been saved in `final_ridge_model.sav` you can download this file and use it to predict used car prices 
+
+<br>
+
+* Code Example
+```ruby
+def predict_price(used_car):
+    model = pickle.load(open("final_ridge_model.sav", 'rb'))
+    feature_set = [
+        'manufacturer',
+        'condition',
+        'cylinders',
+        'fuel',
+        'title_status',
+        'transmission',
+        'drive',
+        'type',
+        'year',
+        'odometer'
+    ]
+    used_car_df = pd.DataFrame([used_car], columns=feature_set)
+    display(used_car_df)
+    pred_with_ridge = model.predict(used_car_df)
+    msg = f"The Estimated Price Of The Given Car Is: ${round(pred_with_ridge[0], 2)}"
+    return msg
+
+
+my_car = [
+    "ford", 
+    "good", 
+    "6 cylinders",  
+    "gas", 
+    "clean", 
+    "automatic", 
+    "rwd", 
+    "truck", 
+    1994, 
+    260000
+]
+
+
+predict_price(my_car)
+
+```
+
 
 
 

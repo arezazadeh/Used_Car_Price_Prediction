@@ -284,6 +284,49 @@ As indicated below, as the age of the car increases, the price goes lower, also 
 From above plots of coefficients, we can conclude that bars that are above the zero line, will make the car expensive and the bars below the zero line will make the car less expensive. this can be provided to the car dealership to help their customers to pick a right car based on their budget. 
 
 
+### Features Being Used to Model
+
+- Manufacturer <br>
+    * **Expensive Manufacturer:**<br>
+    *Tesla, Toyota, Lexus, Porsche and Audi*
+    * **Cheap Manufacturer:**<br>
+    *Chrysler, Hyundai, Kia, Nissan, Mitsubishi and Volkswagen.*
+- Type of the Car <br>
+    * **Expensive Types:** <br>
+    *Coupe, Pickup, Truck and Convertible*
+    * **Cheap Types:**<br>
+    *Hatchback, Sedan, Wagon*
+- Fuel<br>
+    * **Expensive Fuel Type:**<br>
+    *Diesel*
+    * **Less Expensive Fuel Type Compare to Diesel:**<br>
+    *Electric, and Hybrid are the most expensive one after Diesel, Gas Type is more cheaper*
+- Title Status <br>
+    * **Expensive Car With Below Title Status**<br>
+    *Clean, Lien*
+    * **Cheap Car With Below Title Status:**<br>
+    *Rebuild, Salvage, Missing*
+- Transmission<br>
+    * **Expensive Car With Below Transmission Type:**<br>
+    *Manual*
+    * **Cheap Car With Below Transmission Type:**<br>
+    *Automatic, Other* (Other needs to be clarified by the businees)*
+- Drive <br>
+    * **Expensive Car With Below Drive Type:**<br>
+    *4WD (All Wheel Drive), RWD (Rear Wheel Drive)*
+    * **Cheap Car With Below Drive Type:**<br>
+    *FWD (Forward Wheel Drive)*
+- State<br>
+    * **Expensive Car In Different State:**<br>
+    *Washington State, Oregan, Texas, Idaho, and California*
+    * **Cheap Car In Different State:**<br>
+    *Michigan, New Jersey, New York, Pennsylvania, Wisconsin, Connecticut*
+- Year<br>
+The Older the car, the cheaper it gets. 
+- Odometer<br>
+The Higher the Odometer, the Cheaper it gets. 
+
+
 <br>
 
 ## Conclusion

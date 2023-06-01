@@ -172,6 +172,12 @@ After our initial exploration and fine tuning of the business understanding, it 
 ```python 
 df_copy = df_copy.query("1000 < price < 60000").copy()
 ```
+
+**KDE Plot Of the Price after dropping the outliers:**
+
+<img src="images/price_no_outliers.png"><br><br>
+
+
 - Filling the `Cylinders` and `transmission` columns for `Electric` Cars to `other`
 
 ```ruby
@@ -200,6 +206,27 @@ df_imputed_num = pd.DataFrame(imputer.fit_transform(df_copy.select_dtypes(["int"
 - Modeling with Ridge Regression 
 
 <img src="images/model.png">
+<br>
+<br>
+<hr>
+
+## Retriving Coefficients to Determine Which Features Affects The Price
+
+* Numerical Coefficients `Odometer` and `Year` and `Odometer Year` 
+As indicated below, as the age of the car increases, the price goes lower, also if odometer goes higher, the price drops as well. 
+
+<img src="images/num_coef.png"><br><br>
+
+* Manufacturers Coefficients
+
+<img src="images/man_coef.png">
+<br><br>
+
+* Coefficients Of All Other Features 
+
+<img src="images/coef1.png">
+<img src="images/coef2.png">
+<br><br>
 
 
 

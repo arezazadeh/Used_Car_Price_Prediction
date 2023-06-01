@@ -164,7 +164,15 @@ The dataset indicates, Ford F-150 is the most liked used car across the US.
 
 ## Data Preparation
 
-After our initial exploration and fine tuning of the business understanding, it is time to construct our final dataset prior to modeling.  Here, we want to make sure to handle any integrity issues and cleaning, the engineering of new features, any transformations that we believe should happen (scaling, logarithms, normalization, etc.), and general preparation for modeling with `sklearn`. 
+There are lots NaNs in the dataset, we probably need to go back to the business and gather more information about these Nans. but there are some rows that have almost all the columns NaN, so i have decided to drop those. <br>
+
+I also dropped the all the NaNs in Manufacturer and Year columns. the rest of the NaNs will be imputed by most frequent and KNN. 
+<br>
+
+After dropping `id` I ended up with lots of duplicates, I dropped those duplicates if their `VIN` was the same or Null. <br>
+I kept the rest of the duplicates as their `VIN` are different. 
+
+
 
 
 - Dropping the outliers in the `price`<br>
@@ -203,7 +211,25 @@ df_imputed_num = pd.DataFrame(imputer.fit_transform(df_copy.select_dtypes(["int"
 ```
 <br>
 
-- Modeling with Ridge Regression 
+## Modeling 
+
+- Features that I have decided to use for modeling: 
+```ruby
+'manufacturer'
+'condition'
+'cylinders'
+'fuel'
+'title_status'
+'transmission'
+'drive'
+'type'
+'year'
+'odometer
+```
+All other features are dropped 
+<br>
+<br>
+- Modeling with Ridge Regression  
 
 <img src="images/model.png">
 <br>

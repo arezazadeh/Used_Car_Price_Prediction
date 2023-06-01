@@ -367,6 +367,7 @@ predict_price(my_car)
 `The Estimated Price Of The Given Car Is: $5873.85`
 
 
+### Deployed App 
+I have also deployed the app in one of my public facing websites. you can check it out
 
-
-
+<h3><a href="http://anjiismail.com/ai_ml_deployments/predict-car-price/">Deployed Model</a></h3>

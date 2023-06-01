@@ -229,9 +229,34 @@ df_imputed_num = pd.DataFrame(imputer.fit_transform(df_copy.select_dtypes(["int"
 All other features are dropped 
 <br>
 <br>
-- Modeling with Ridge Regression  
+I tried to model with Lasso and LinearRegression but the best result came from Ridge hence continuing with Ridge 
 
-<img src="images/model.png">
+### Modeling with Ridge Regression  
+
+- Transforming all the categorical columns to OneHotEncoding, except the Condition. <br>
+- Condition is being transformed with OrdinalEncoder <br>
+- `cylinders`, `odometer`, and `year` are being transformed with Polynomial to 3 degree. I used 4 degres but seemed to be overfitted when checking the MSE of train and test, hence going with `degree=3`
+- StandardScaler on all the numerical columns 
+- Ridge Model with `alphas` from `0.1` to `100` and `random_state` of 10 and 100 <br>
+
+<img src="images/model_.png">
+<br><br>
+
+#### MSE and Score of Test and Train Dataset 
+
+```ruby
+------------ Train and Test MeanSquaredError For Ridge ---------------
+Train MSE: 6499.32
+Test MSE : 6463.92
+Best Hyperparameters : {'ridge__alpha': 0.1, 'ridge__random_state': 10}
+
+
+------------ Train and Test Scores For Ridge ---------------
+Ridge Train Score: 0.74
+Ridge Test Score: 0.74
+
+```
+
 <br>
 <br>
 <hr>
@@ -252,10 +277,12 @@ As indicated below, as the age of the car increases, the price goes lower, also 
 
 <img src="images/coef1.png">
 <img src="images/coef2.png">
+<img src="images/state_coef.png">
 <br><br>
 
 
 From above plots of coefficients, we can conclude that bars that are above the zero line, will make the car expensive and the bars below the zero line will make the car less expensive. this can be provided to the car dealership to help their customers to pick a right car based on their budget. 
+
 
 <br>
 
@@ -267,14 +294,30 @@ Purhaps this can be advised to the car dealership as what used car is more popul
 <hr>
 <hr>
 
-### FYI - If you are interested testing this model, It has been saved in `final_ridge_model.sav` you can download this file and use it to predict used car prices 
+### FYI - If you are interested testing this model, It has been saved in `best_model_so_far.sav` you can download this file and use it to predict used car prices 
 
 <br>
 
 * Code Example
 ```ruby
 def predict_price(used_car):
-    model = pickle.load(open("final_ridge_model.sav", 'rb'))
+    """
+          Data Types passed to this function 
+    -----------------------------------------------
+        'manufacturer'      :       String
+        'condition'         :       String
+        'cylinders'         :       Integer 
+        'fuel'              :       String
+        'title_status'      :       String
+        'transmission'      :       String
+        'drive'             :       String            
+        'type'              :       String
+        'state'             :       String
+        'year'              :       Integer
+        'odometer'          :       Integer
+    -----------------------------------------------
+    """
+    model = pickle.load(open("best_model_so_far.sav", 'rb'))
     feature_set = [
         'manufacturer',
         'condition',
@@ -284,6 +327,7 @@ def predict_price(used_car):
         'transmission',
         'drive',
         'type',
+        'state',
         'year',
         'odometer'
     ]
@@ -295,16 +339,17 @@ def predict_price(used_car):
 
 
 my_car = [
-    "ford", 
+    "honda", 
     "good", 
-    "6 cylinders",  
+    4,  
     "gas", 
     "clean", 
     "automatic", 
-    "rwd", 
-    "truck", 
-    1994, 
-    260000
+    "fwd", 
+    "sedan",
+    'ca',
+    2012, 
+    176000
 ]
 
 
@@ -312,6 +357,14 @@ predict_price(my_car)
 
 ```
 
+- Dataframe passed to the model to predict: 
+
+<img src="images/mycar.png">
+
+<br>
+
+**Output:**<br>
+`The Estimated Price Of The Given Car Is: $5873.85`
 
 
 

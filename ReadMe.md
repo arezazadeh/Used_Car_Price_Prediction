@@ -283,57 +283,57 @@ As indicated below, as the age of the car increases, the price goes lower, also 
 From above plots of coefficients, we can conclude that bars that are above the zero line, will make the car expensive and the bars below the zero line will make the car less expensive. this can be provided to the car dealership to help their customers to pick a right car based on their budget. 
 
 
-### Features Being Used to Model
 
-- Manufacturer <br>
-    * **Expensive Manufacturer:**<br>
-    *Tesla, Toyota, Lexus, Porsche and Audi*
-    * **Cheap Manufacturer:**<br>
-    *Chrysler, Hyundai, Kia, Nissan, Mitsubishi and Volkswagen.*
-- Type of the Car <br>
-    * **Expensive Types:** <br>
-    *Coupe, Pickup, Truck and Convertible*
-    * **Cheap Types:**<br>
-    *Hatchback, Sedan, Wagon*
-- Fuel<br>
-    * **Expensive Fuel Type:**<br>
-    *Diesel*
-    * **Less Expensive Fuel Type Compare to Diesel:**<br>
-    *Electric, and Hybrid are the most expensive one after Diesel, Gas Type is more cheaper*
-- Title Status <br>
-    * **Expensive Car With Below Title Status**<br>
-    *Clean, Lien*
-    * **Cheap Car With Below Title Status:**<br>
-    *Rebuild, Salvage, Missing*
-- Transmission<br>
-    * **Expensive Car With Below Transmission Type:**<br>
-    *Manual*
-    * **Cheap Car With Below Transmission Type:**<br>
-    *Automatic, Other* (Other needs to be clarified by the businees)*
-- Drive <br>
-    * **Expensive Car With Below Drive Type:**<br>
-    *4WD (All Wheel Drive), RWD (Rear Wheel Drive)*
-    * **Cheap Car With Below Drive Type:**<br>
-    *FWD (Forward Wheel Drive)*
-- State<br>
-    * **Expensive Car In Different State:**<br>
-    *Washington State, Oregan, Texas, Idaho, and California*
-    * **Cheap Car In Different State:**<br>
-    *Michigan, New Jersey, New York, Pennsylvania, Wisconsin, Connecticut*
-- Year<br>
-The Older the car, the cheaper it gets. 
-- Odometer<br>
-The Higher the Odometer, the Cheaper it gets. 
+## Analysis of Factors Influencing Used Car Prices
+
+**Introduction**
+This report analyzes the factors influencing the prices of used cars based on the provided coefficient values for various features. By examining these coefficients, we gain insights into how different factors impact the pricing of used cars. The features examined include Manufacturer, Type, Fuel, Title Status, Transmission, Drive, and State.
+
+**Manufacturer**
+The coefficient values associated with different car manufacturers indicate the estimated impact of each brand on used car prices. Positive coefficients suggest a potential price increase, while negative coefficients indicate a potential price decrease. Some key findings from the Manufacturer coefficients are:
+
+- Luxury Brands: Audi, BMW, Cadillac, Lexus, Mercedes-Benz, Porsche, and Tesla have positive coefficients, indicating that used cars from these luxury brands tend to command higher prices.
+
+- Mainstream Brands: Acura, Chevrolet, Ford, GMC, Jeep, Lincoln, Nissan, Ram, Subaru, Toyota, and Volvo also have positive coefficients, indicating that used cars from these brands generally have higher prices compared to the baseline.
+
+- Economy Brands: Brands such as Buick, Chrysler, Fiat, Honda, Hyundai, Mitsubishi, Saturn, and Volkswagen have negative coefficients, suggesting that used cars from these brands tend to have lower prices compared to the baseline.
+
+**Type**
+The Type coefficients indicate the influence of different car types on used car prices. Positive coefficients imply higher prices, while negative coefficients suggest lower prices. Key findings from the Type coefficients are:
+
+- Convertible, Coupe, Offroad, Pickup, and Truck have positive coefficients, indicating that these car types tend to command higher prices in the used car market.
+
+- Hatchback, Mini-Van, Sedan, SUV, and Wagon have negative coefficients, suggesting that these car types tend to have lower prices compared to the baseline.
+
+**Fuel**
+The Fuel coefficients represent the impact of different fuel types on used car prices. Positive coefficients indicate potential price increases, while negative coefficients suggest potential price decreases. Key findings from the Fuel coefficients are:
+
+- Diesel has a positive coefficient, indicating that used cars powered by diesel tend to have higher prices.
+
+- Gas, Hybrid, and Other fuel types have negative coefficients, suggesting that used cars running on these fuel types tend to have lower prices compared to the baseline.
+
+**Title_Status**
+The Title_Status coefficients represent the influence of different title statuses on used car prices. Positive coefficients imply higher prices, while negative coefficients suggest lower prices. Key findings from the Title_Status coefficients are:
+
+- Clean title status has a positive coefficient, indicating that used cars with clean titles tend to have higher prices.
+
+- Rebuilt and Salvage title statuses have negative coefficients, suggesting that used cars with these titles tend to have lower prices compared to the baseline.
+
+**Transmission, Drive, and State**
+The Transmission, Drive, and State coefficients represent the impact of different transmission types, drive types, and states on used car prices, respectively. Positive coefficients suggest potential price increases, while negative coefficients suggest potential price decreases.
+
+- Key findings from the Transmission coefficients indicate that used cars with automatic transmissions tend to have higher prices compared to other transmission types.
+
+- Positive coefficients for Drive types 4Wd (Four-Wheel Drive) and Rwd (Rear-Wheel Drive) indicate potential price increases, while a negative coefficient for Fwd (Front-Wheel Drive) suggests a potential price decrease.
+
+- The coefficients associated with different states indicate the estimated impact of each state on used car prices. Positive coefficients imply potential price increases, while negative coefficients suggest potential price decreases.
+
+**Conclusion**
+This analysis provides insights into the factors influencing used car prices based on the coefficient values of various features. The coefficients help us understand the estimated impact of each feature on used car pricing. However, it is important to note that these coefficients are based on the provided information and should be interpreted
 
 
 <br>
 
-## Conclusion
-
-Based on the information that was retrived from this dataset, Ford F-150 (Pickup) is the highest sold car across the United States. This was also verified in <a href="https://www.iseecars.com/most-popular-cars-study">iSeeCars.com</a><br>
-Purhaps this can be advised to the car dealership as what used car is more populare in the country. 
-
-<hr>
 <hr>
 
 ### FYI - If you are interested testing this model, It has been saved in `best_model_so_far.sav` you can download this file and use it to predict used car prices 

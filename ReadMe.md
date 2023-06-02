@@ -12,24 +12,24 @@ The data problem entails conducting a comprehensive analysis using a dataset of 
 
 ### Below is a description of the features present in the dataset:
 
-**id**: An identifier or unique identifier for each entry in the dataset.<br>
-**region**: The region or location where the vehicle is listed for sale.<br>
-**price**: The price of the vehicle listed for sale.<br>
-**year**: The manufacturing year of the vehicle.<br>
-**manufacturer**: The manufacturer or brand of the vehicle.<br>
-**model**: The model name or number of the vehicle.<br>
-**condition**: The condition or state of the vehicle (e.g., excellent, good, fair).<br>
-**cylinders**: The number of cylinders in the vehicle's engine.<br>
-**fuel**: The type of fuel the vehicle uses (e.g., gasoline, diesel, electric).<br>
-**odometer**: The number of miles or kilometers the vehicle has been driven.<br>
-**title_status**: The status of the vehicle's title (e.g., clean, salvage, rebuilt).<br>
-**transmission**: The type of transmission in the vehicle (e.g., automatic, manual).<br>
+**ID**: An identifier or unique identifier for each entry in the dataset.<br>
+**Region**: The region or location where the vehicle is listed for sale.<br>
+**Price**: The price of the vehicle listed for sale.<br>
+**Year**: The manufacturing year of the vehicle.<br>
+**Manufacturer**: The manufacturer or brand of the vehicle.<br>
+**Model**: The model name or number of the vehicle.<br>
+**Condition**: The condition or state of the vehicle (e.g., excellent, good, fair).<br>
+**Cylinders**: The number of cylinders in the vehicle's engine.<br>
+**Fuel**: The type of fuel the vehicle uses (e.g., gasoline, diesel, electric).<br>
+**Odometer**: The number of miles or kilometers the vehicle has been driven.<br>
+**Title Status**: The status of the vehicle's title (e.g., clean, salvage, rebuilt).<br>
+**Transmission**: The type of transmission in the vehicle (e.g., automatic, manual).<br>
 **VIN**: The Vehicle Identification Number, a unique identifier for the vehicle.<br>
-**drive**: The type of drive or drivetrain in the vehicle (e.g., 2-wheel drive, 4-wheel drive).<br>
-**size**: The size or class of the vehicle (e.g., compact, mid-size, full-size).<br>
-**type**: The body type or style of the vehicle (e.g., sedan, SUV, truck).<br>
-**paint_color**: The color of the vehicle's exterior paint.<br>
-**state**: The state where the vehicle is listed for sale.<br>
+**Drive**: The type of drive or drivetrain in the vehicle (e.g., 2-wheel drive, 4-wheel drive).<br>
+**Size**: The size or class of the vehicle (e.g., compact, mid-size, full-size).<br>
+**Type**: The body type or style of the vehicle (e.g., sedan, SUV, truck).<br>
+**Paint Color**: The color of the vehicle's exterior paint.<br>
+**State**: The state where the vehicle is listed for sale.<br>
 
 ```python
 <class 'pandas.core.frame.DataFrame'>
@@ -413,4 +413,4 @@ predict_price(my_car)
 ### Deployed App 
 I have also deployed the app in one of my public facing websites. you can check it out
 
-<h3><a href="http://anjiismail.com/ai_ml_deployments/predict-car-price/">Deployed Model</a></h3>
+<h3><a href="http://klevernet.io/ai_ml_deployments/predict-car-price/">Deployed Model</a></h3>

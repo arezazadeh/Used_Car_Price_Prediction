@@ -126,9 +126,8 @@ Cars with Good Condition have been sold the most, and Excellent is the second, a
 <br>
 
 
-3. Median Price by Manufacturer 
-<br>
-below is the bar plot of Median Price of Manufacturer Sold country wide. <br>
+3. Median Price by Manufacturer <br>
+below is the bar plot of Median Price of Manufacturer Sold country wide.
 as it indicates, the Ferrari is the most expensive car
 
 <img src="images/price_man.png">

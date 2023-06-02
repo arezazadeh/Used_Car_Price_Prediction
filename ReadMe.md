@@ -329,7 +329,7 @@ The Transmission, Drive, and State coefficients represent the impact of differen
 - The coefficients associated with different states indicate the estimated impact of each state on used car prices. Positive coefficients imply potential price increases, while negative coefficients suggest potential price decreases.
 
 **Conclusion**
-This analysis provides insights into the factors influencing used car prices based on the coefficient values of various features. The coefficients help us understand the estimated impact of each feature on used car pricing. However, it is important to note that these coefficients are based on the provided information and should be interpreted
+This analysis provides insights into the factors influencing used car prices based on the coefficient values of various features. The coefficients help us understand the estimated impact of each feature on used car pricing. 
 
 
 <br>
